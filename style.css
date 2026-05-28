@@ -16,7 +16,99 @@ body {
 
 
 /* style index.html */
+/* reset basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background-color: #FAF6EE; /* Warna background krem hangat sesuai gambar */
+    font-family: 'Nunito Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR STYLING */
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Menyejajarkan menu ke kanan */
+    padding: 20px 40px;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.navbar a:hover {
+    color: #f3d47a; /* Efek hover saat disentuh mouse */
+}
+
+/* KONTEN UTAMA */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 100px; /* Supaya posisinya agak naik mirip di gambar */
+}
+
+/* Logo */
+.logo-container {
+    margin-bottom: 30px;
+}
+
+.logo {
+    max-width: 180px; /* Ukuran logo bisa kamu sesuaikan */
+    height: auto;
+}
+
+/* Judul Utama */
+.main-title {
+    font-family: 'Chonburi', serif;
+    font-size: 50px; /* Ukuran font besar sesuai desain */
+    font-weight: 400;
+    color: #232323;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+/* CONTAINER TOMBOL */
+.button-container {
+    display: flex;
+    gap: 25px; /* Jarak antar tombol */
+}
+
+/* Gaya Tombol Kuning */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #FCE484; /* Warna kuning pastel */
+    color: #1a1a1a;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800; /* Font tebal untuk tombol */
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 15px 45px;
+    border: 1px solid #c9b363; /* Border tipis halus */
+    border-radius: 30px; /* Membuat sudut tombol melengkung (oval) */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #f7da65;
+    transform: translateY(-2px); /* Efek sedikit terangkat saat di-hover */
+}
 
 
 
