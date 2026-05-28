@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- stlesheet -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,63 +18,66 @@
         <a href="#">Pemesanan</a>
     </nav>
 
-    
+    <main class="pemesanan-wrapper">
+
+    <div class="pemesanan-kiri">
+        <img src="asset/asset pemesanan.png" alt="Ilustrasi Pemesanan" class="img-pemesanan">
+    </div>
+    <div class="pemesanan-kanan">
+        <h1 class="pemesanan-title">PEMESANAN</h1>
+
     <!-- FORM YANG MASUK KE DATABASE -->
     <div class="form-container">
         <form action="" method="POST" enctype="multipart/form-data">
 
             <div class="kotak-input">
                 <label for="nama">NAMA PEMESAN</label>
-                <input type="text" name="nama" id="nama">
+                <input type="text" name="nama" id="nama" required>
             </div>
-
-            <br>
 
             <div class="kotak-input">
                 <label for="alamat">ALAMAT RUMAH</label>
-                <input type="text" name="alamat" id="alamat">
+                <input type="text" name="alamat" id="alamat" required>
             </div>
-
-            <br>
 
             <div class="kotak-input">
                 <label for="nowa">NOMOR WHATSAPP</label>
-                <input type="text" name="nomor" id="nowa">
+                <input type="text" name="nomor" id="nowa" required>
             </div>
-
-            <br>
 
             <div class="kotak-input">
                 <label for="luas rumah">LUAS RUANGAN</label>
-                <input type="number" name="luas" id="luasrumah">
+                <input type="number" name="luas" id="luasrumah" required>
             </div>
-
-            <br>
             
             <div class="kotak-input">
                 <label for="pilihan">WAKTU PEMBERSIHAN</label>
-                <select name="pilihan" id="pilihan">
-                    <option value="pagi">08.00</option>
-                    <option value="siang">13.00</option>
-                    <option value="malam">19.00</option>
-                </select>
+                <div class="select-wrapper">
+                    <select name="pilihan" id="pilihan">
+                        <option value="pagi">08.00</option>
+                        <option value="siang">13.00</option>
+                        <option value="malam">19.00</option>
+                    </select>
+                </div>
             </div>
-        
-            <br>
 
             <div class="kotak-input">
-                <p>
-                    Harga akan otomatis muncul ketika anda telah mengklik tombol dibawah ini!
-                    Silahkan klik dan konfirmasi sekali lagi.
-                </p>
+                <label for="harga">HARGA</label>
+                <input type="text" id="harga" name="harga" readonly placeholder="---">
             </div>
 
-            <br>
-
-            <button type="submit" name="action" value="pesan" onclick="hitungDanKonfirmasi()">PESAN</button>
+            <p class="info-harga">
+                Harga akan otomatis muncul ketika anda telah mengklik tombol dibawah ini!
+                Silahkan klik dan konfirmasi sekali lagi.
+            </p>
+            
+            <div class="btn-submit-container">
+                <button type="submit" name="action" value="pesan" class="btn-pesan" onclick="hitungDanKonfirmasi()">PESAN</button>
+            </div>
         </form>
     </div>
-
+    </main>
+    
 <script src="script.js"></script>
 </body>
 </html>
