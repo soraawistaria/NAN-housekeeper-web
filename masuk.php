@@ -24,7 +24,7 @@ if (isset($_POST['username'])) {
 
         echo "<script>
                 alert('Selamat Datang, " . $_SESSION['username'] . "!');
-                window.location='index.php'; 
+                window.location='index.html'; 
             </script>";
     } else {
         // Jika tidak cocok
