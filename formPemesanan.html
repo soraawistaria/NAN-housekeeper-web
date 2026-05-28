@@ -24,21 +24,36 @@
     <!-- FORM YANG MASUK KE DATABASE -->
     <form action="" method="POST" enctype="multipart/form-data">
 
-        <label for="">NAMA PEMESAN</label>
+        <label for="nama">NAMA PEMESAN</label>
         <input type="text" name="nama" id="nama">
 
-        <label for="">ALAMAT RUMAH</label>
+        <br>
+
+        <label for="alamat">ALAMAT RUMAH</label>
         <input type="text" name="alamat" id="alamat">
 
-        <label for="">NOMOR WHATSAPP</label>
+        <br>
+
+        <label for="nowa">NOMOR WHATSAPP</label>
         <input type="text" name="nomor" id="nowa">
 
-        <label for="">LUAS RUANGAN</label>
+        <br>
+
+        <label for="luas rumah">LUAS RUANGAN</label>
         <input type="number" name="luas" id="luasrumah">
 
-        <label for="">WAKTU PEMBERSIHAN</label>
-        <input type="time" name="waktu bersih" id="waktubersih">
+        <br>
+
+        <label for="pilihan">WAKTU PEMBERSIHAN</label>
+        <select name="pilihan" id="pilihan">
+            <option value="pagi">08.00</option>
+            <option value="siang">13.00</option>
+            <option value="malam">19.00</option>
+        </select>
     
+        <br>
+
+        <button type="submit" name="action" value="pesan">PESAN</button>
         <!-- form harga tuhh kayanya salah deh, kan ini harga hasil perhitungan dari kita, kenapa minta input... -->
     </form>
 </body>
