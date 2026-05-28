@@ -1,16 +1,39 @@
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="profile.html">Profil</a>
+        <a href="masuk.html">Masuk</a>
+        <a href="#">Daftar</a>
+        <a href="formPemesanan.html">Pemesanan</a>
+    </nav>
 
-    <body>
-        <nav class="navbar">
-            <a href="index.html">Beranda</a>
-            <a href="profile.html">Profil</a>
-            <a href="masuk.html">Masuk</a>
-            <a href="#">Daftar</a>
-            <a href="formPemesanan.html">Pemesanan</a>
-        </nav>
+    <main class="main-content">
+        <div class="register">
+            <h1 class="main-title">DAFTAR</h1>
 
+            <img src="asset/asset daftar.png" class="illustrasi">
 
-    </body>
+            <div class="register">
+                <form id="registerForm" method="POST">
+                    <input type="text" id="user" name="username" placeholder="Username" required>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </form>
+            </div>
+
+            <button type="submit" form="registerForm" class="btn">DAFTAR</button>
+        </div>
+    </main>
+</body>
+</html>

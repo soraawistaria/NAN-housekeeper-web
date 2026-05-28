@@ -11,11 +11,112 @@ body {
 
 
 /* style halaman masuk */
+/* Konten Utama Halaman Login */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Wrapper Utama Area Login */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 650px; /* Batas lebar maksimal konten login */
+    position: relative; /* Posisi absolute ilustrasi */
+    margin-top: 20px;
+}
+
+/* Judul "MASUK" */
+.login .main-title {
+    font-family: 'Chonburi', serif;
+    font-size: 45px;
+    font-weight: 400;
+    color: #231f20;
+    margin-bottom: 20px;
+}
+
+/* BOX KUNING TEMPAT INPUT */
+.login-box {
+    background-color: #ffe97d;
+    width: 100%;
+    padding: 50px 40px;
+    border-radius: 20px; /* Sudut melengkung box kuning */
+    box-sizing: border-box;
+    margin-bottom: 35px;
+}
+
+/* Form Layout */
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Jarak antar kolom input */
+}
+
+/* STYLING INPUT (Username & Password) */
+#loginForm input {
+    width: 100%;
+    background-color: #fffcf5; /* Latar belakang putih */
+    border: none;
+    outline: none;
+    padding: 22px 30px;
+    font-family: 'Nunito Sans', serif; /* Font input agak serif mirip desain */
+    font-size: 24px;
+    color: #333333;
+    border-radius: 25px; /* Membuat input berbentuk oval panjang */
+    box-sizing: border-box;
+    position: relative;   /* Wajib ditambah agar z-index-nya berfungsi */
+    z-index: 2;           /* Set ke 2 agar posisinya berada di atas ilustrasi (layer 1) */
+}
+
+/* Mengubah warna teks placeholder agar abu-abu elegan */
+#loginForm input::placeholder {
+    color: #9e9e9e;
+    opacity: 0.8;
+}
+
+/* POSISI ILUSTRASI (Orang bersih-bersih) */
+.illustration {
+    position: absolute;
+    right: -80px;        /* Menggeser ilustrasi agak ke kanan melewati batas box */
+    top: 0px;          /* Mengatur posisi tinggi ilustrasi agar pas di atas box kuning */
+    height: 200px;      /* Sesuaikan tinggi ilustrasi agar proporsional */
+    width: auto;
+    z-index: 1;        /* Memastikan gambar berada di lapisan paling depan */
+    pointer-events: none; /* Biar kalau tidak sengaja terklik, tidak mengganggu input */
+}
+
+/* TOMBOL MASUK KUNING DI BAWAH */
+.login .btn {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #ffe97d;
+    color: #1a1a1a;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 15px 65px; /* Lebih lebar sedikit sesuai gambar */
+    border: 1px solid #ffe97d;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.login .btn:hover {
+    background-color: #f7da65;
+    transform: translateY(-2px);
+}
 
 
 
-
-/* style index.html */
+/* 🌻🌻🌻🌻🌻style index.html🌻🌻🌻🌻🌻 */
 /* reset basic styling */
 * {
     margin: 0;
@@ -24,7 +125,7 @@ body {
 }
 
 body {
-    background-color: #FAF6EE; /* Warna background krem hangat sesuai gambar */
+    background-color: #fffcf5; /* Warna background krem hangat sesuai gambar */
     font-family: 'Nunito Sans', sans-serif;
     min-height: 100vh;
     display: flex;
