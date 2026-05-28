@@ -77,7 +77,7 @@ body {
     font-family: 'Chonburi', serif;
     font-size: 50px; /* Ukuran font */
     font-weight: 400;
-    color: #232323;
+    color: #231f20;
     margin-bottom: 40px;
     letter-spacing: -1px;
 }
@@ -92,8 +92,8 @@ body {
 .btn {
     display: inline-block;
     text-decoration: none;
-    background-color: #FCE484;
-    color: #1a1a1a;
+    background-color: #ffe97d;
+    color: #231f20;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 800; /* Font tebal untuk tombol */
     font-size: 14px;
@@ -106,7 +106,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #f7da65;
+    background-color: #ffe97d;
     transform: translateY(-2px); /* Efek sedikit terangkat saat di-hover */
 }
 
