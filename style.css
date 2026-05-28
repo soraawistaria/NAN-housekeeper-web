@@ -37,6 +37,8 @@ body {
     justify-content: flex-end; /* Menyejajarkan menu ke kanan */
     padding: 20px 40px;
     gap: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: #FAF6EE;
 }
 
 .navbar a {
@@ -68,16 +70,16 @@ body {
 }
 
 .logo {
-    max-width: 180px; /* Ukuran logo bisa kamu sesuaikan */
+    max-width: 180px; /* Ukuran logo */
     height: auto;
 }
 
 /* Judul Utama */
 .main-title {
     font-family: 'Chonburi', serif;
-    font-size: 50px; /* Ukuran font besar sesuai desain */
+    font-size: 50px; /* Ukuran font */
     font-weight: 400;
-    color: #232323;
+    color: #231f20;
     margin-bottom: 40px;
     letter-spacing: -1px;
 }
@@ -92,21 +94,21 @@ body {
 .btn {
     display: inline-block;
     text-decoration: none;
-    background-color: #FCE484; /* Warna kuning pastel */
-    color: #1a1a1a;
+    background-color: #ffe97d;
+    color: #231f20;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 800; /* Font tebal untuk tombol */
     font-size: 14px;
     letter-spacing: 1px;
     padding: 15px 45px;
     border: 1px solid #c9b363; /* Border tipis halus */
-    border-radius: 30px; /* Membuat sudut tombol melengkung (oval) */
+    border-radius: 30px; /* Membuat sudut tombol melengkung */
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     transition: transform 0.2s, background-color 0.2s;
 }
 
 .btn:hover {
-    background-color: #f7da65;
+    background-color: #ffe97d;
     transform: translateY(-2px); /* Efek sedikit terangkat saat di-hover */
 }
 
