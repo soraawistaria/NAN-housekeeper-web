@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
+    <title>Login</title> 
     <!-- stylesheet -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <nav class="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="profile.html">Profil</a>
+        <a href="#">Masuk</a>
+        <a href="daftar.html">Daftar</a>
+        <a href="formPemesanan.html">Pemesanan</a>
+    </nav>
+
+    <main class="main-content">
+        <div class="login">
+            <h1 class="main-title">MASUK</h1>
+
+            <img src="asset/asset masuk.png" class="illustration">
+
+            <div class="login-box">
+                <form id="loginForm" method="POST">
+                    <input type="text" id="user" name="username" placeholder="Username" required>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+            </form>
+            </div>
+
+            <button type="submit" form="loginForm" class="btn">MASUK</button>
+        </div>
+    </main>
 </body>
 </html>
