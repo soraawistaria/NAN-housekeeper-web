@@ -1,3 +1,43 @@
+<?php
+// Panggil file koneksi database
+include 'koneksi.php';
+
+// Memulai fungsi session untuk menandai bahwa user sudah login
+session_start();
+
+if (isset($_POST['username'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Query untuk mencocokkan username dan password yang diinput dengan yang ada di database
+    $query  = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+    $result = mysqli_query($koneksi, $query);
+
+    // Jika baris data ditemukan (artinya username & password cocok)
+    if (mysqli_num_rows($result) === 1) {
+        $data_user = mysqli_fetch_assoc($result);
+        
+        // Simpan data login pengguna ke dalam session browser
+        $_SESSION['login']    = true;
+        $_SESSION['id_user']  = $data_user['id_user'];
+        $_SESSION['username'] = $data_user['username'];
+
+        echo "<script>
+                alert('Selamat Datang, " . $_SESSION['username'] . "!');
+                window.location='index.php'; 
+            </script>";
+    } else {
+        // Jika tidak cocok
+        echo "<script>
+                alert('Username atau Password salah!');
+                window.location='masuk.php';
+            </script>";
+    }
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +55,7 @@
         <a href="index.html">Beranda</a>
         <a href="profile.html">Profil</a>
         <a href="#">Masuk</a>
-        <a href="daftar.html">Daftar</a>
+        <a href="daftar.php">Daftar</a>
         <a href="formPemesanan.php">Pemesanan</a>
     </nav>
 

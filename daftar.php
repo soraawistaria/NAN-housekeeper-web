@@ -1,3 +1,37 @@
+<?php
+// Panggil file koneksi database
+include 'koneksi.php';
+
+if (isset($_POST['username'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password']; // Disimpan dalam bentuk teks biasa untuk keperluan tugas/belajar
+
+    // Validasi agar input tidak kosong
+    if (!empty($username) && !empty($password)) {
+        
+        // Query untuk memasukkan data ke tabel users
+        // id_user tidak perlu diisi karena otomatis (Auto Increment)
+        $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+        $simpan = mysqli_query($koneksi, $query);
+
+        if ($simpan) {
+            echo "<script>
+                    alert('Pendaftaran berhasil! Silakan masuk.');
+                    window.location='masuk.php';
+                </script>";
+        } else {
+            echo "<script>
+                    alert('Gagal mendaftar: " . mysqli_error($koneksi) . "');
+                </script>";
+        }
+    } else {
+        echo "<script>alert('Username dan Password tidak boleh kosong!');</script>";
+    }
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +49,7 @@
     <nav class="navbar">
         <a href="index.html">Beranda</a>
         <a href="profile.html">Profil</a>
-        <a href="masuk.html">Masuk</a>
+        <a href="masuk.php">Masuk</a>
         <a href="#">Daftar</a>
         <a href="formPemesanan.php">Pemesanan</a>
     </nav>

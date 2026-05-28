@@ -52,8 +52,8 @@ if (isset($_POST['nama'])) {
     <nav class="navbar">
         <a href="index.html">Beranda</a>
         <a href="profile.html">Profil</a>
-        <a href="masuk.html">Masuk</a>
-        <a href="daftar.html">Daftar</a>
+        <a href="masuk.php">Masuk</a>
+        <a href="daftar.php">Daftar</a>
         <a href="#">Pemesanan</a>
     </nav>
 
