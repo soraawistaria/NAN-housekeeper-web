@@ -1,3 +1,42 @@
+<?php
+// 1. Panggil file koneksi yang tadi kita buat
+include 'koneksi.php';
+
+// 2. Cek apakah tombol PESAN sudah diklik dan mengirimkan data nama
+if (isset($_POST['nama'])) {
+    // Ambil data dari input HTML berdasarkan atribut 'name'
+    $nama   = $_POST['nama'];
+    $alamat = $_POST['alamat'];
+    $nomor  = $_POST['nomor']; // sesuai atribut name="nomor" di input WA kamu
+    $luas   = $_POST['luas'];
+    $waktu  = $_POST['pilihan'];
+    
+    // Khusus harga, kita hilangkan teks "Rp " dan tanda titik "." agar tersimpan sebagai angka bersih (INT)
+    $harga_mentah = $_POST['harga'];
+    $harga  = preg_replace('/[^0-9]/', '', $harga_mentah); 
+
+    // 3. Masukkan data ke tabel pesanan di HeidiSQL
+    // Sesuaikan dengan nama kolom baru yang kamu buat tadi (id_pesanan tidak perlu diisi karena auto increment)
+    $query = "INSERT INTO pesanan (nama, alamat, no_wa, luas, waktu, harga) 
+            VALUES ('$nama', '$alamat', '$nomor', '$luas', '$waktu', '$harga')";
+    
+    $simpan = mysqli_query($koneksi, $query);
+
+    // 4. Beri notifikasi ke user
+    if ($simpan) {
+        echo "<script>
+                alert('Pesanan Anda berhasil disimpan ke database!');
+                window.location='formPemesanan.php';
+            </script>";
+    } else {
+        echo "<script>
+                alert('Gagal menyimpan data pesanan: " . mysqli_error($koneksi) . "');
+            </script>";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,8 +85,8 @@
             </div>
 
             <div class="kotak-input">
-                <label for="luas rumah">LUAS RUANGAN</label>
-                <input type="number" name="luas" id="luasrumah" required>
+                <label for="luas rumah">LUAS RUANGAN (m<sup>2</sup>) </label>
+                <input type="number" name="luas" id="luasrumah"  required>
             </div>
             
             <div class="kotak-input">
