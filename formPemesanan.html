@@ -22,43 +22,60 @@
         </ul>
     </div>
     <!-- FORM YANG MASUK KE DATABASE -->
-    <form action="" method="POST" enctype="multipart/form-data">
+    <div class="form-container">
+        <form action="" method="POST" enctype="multipart/form-data">
 
-        <label for="nama">NAMA PEMESAN</label>
-        <input type="text" name="nama" id="nama">
+            <div class="kotak-input">
+                <label for="nama">NAMA PEMESAN</label>
+                <input type="text" name="nama" id="nama">
+            </div>
 
-        <br>
+            <br>
 
-        <label for="alamat">ALAMAT RUMAH</label>
-        <input type="text" name="alamat" id="alamat">
+            <div class="kotak-input">
+                <label for="alamat">ALAMAT RUMAH</label>
+                <input type="text" name="alamat" id="alamat">
+            </div>
 
-        <br>
+            <br>
 
-        <label for="nowa">NOMOR WHATSAPP</label>
-        <input type="text" name="nomor" id="nowa">
+            <div class="kotak-input">
+                <label for="nowa">NOMOR WHATSAPP</label>
+                <input type="text" name="nomor" id="nowa">
+            </div>
 
-        <br>
+            <br>
 
-        <label for="luas rumah">LUAS RUANGAN</label>
-        <input type="number" name="luas" id="luasrumah">
+            <div class="kotak-input">
+                <label for="luas rumah">LUAS RUANGAN</label>
+                <input type="number" name="luas" id="luasrumah">
+            </div>
 
-        <br>
+            <br>
+            
+            <div class="kotak-input">
+                <label for="pilihan">WAKTU PEMBERSIHAN</label>
+                <select name="pilihan" id="pilihan">
+                    <option value="pagi">08.00</option>
+                    <option value="siang">13.00</option>
+                    <option value="malam">19.00</option>
+                </select>
+            </div>
+        
+            <br>
 
-        <label for="pilihan">WAKTU PEMBERSIHAN</label>
-        <select name="pilihan" id="pilihan">
-            <option value="pagi">08.00</option>
-            <option value="siang">13.00</option>
-            <option value="malam">19.00</option>
-        </select>
-    
-        <br>
+            <div class="kotak-input">
+                <p>
+                    Harga akan otomatis muncul ketika anda telah mengklik tombol dibawah ini!
+                    Silahkan klik dan konfirmasi sekali lagi.
+                </p>
+            </div>
 
-        <label for="harga">HARGA</label>
-        <input type="text" name="harga" id="harga" placeholder="Akan terhitung otomatis ketika tombol dibawah ditekan">
+            <br>
 
-        <br>
-
-        <button type="submit" name="action" value="pesan">PESAN</button>
+            <button type="submit" name="action" value="pesan" onclick="hitungDanKonfirmasi()">PESAN</button>
+        </form>
+    </div>
 
 <script src="script.js"></script>
 </body>
