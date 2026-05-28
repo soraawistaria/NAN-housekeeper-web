@@ -37,6 +37,8 @@ body {
     justify-content: flex-end; /* Menyejajarkan menu ke kanan */
     padding: 20px 40px;
     gap: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: #FAF6EE;
 }
 
 .navbar a {
