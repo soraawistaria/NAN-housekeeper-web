@@ -243,6 +243,28 @@ body {
     color: #f3d47a; /* Efek hover saat disentuh mouse */
 }
 
+/* Styling untuk Container Navbarnya */
+.navbar {
+    display: flex;
+    align-items: center; /* Membuat logo dan teks menu sejajar vertikal di tengah */
+    padding: 15px 5%;   /* Memberi jarak atas-bawah dan kanan-kiri navbar */
+    background-color: #fffcf5; /* Sesuaikan dengan warna background navbarmu */
+}
+
+/* TRIK UTAMA: Membuat Logo mepet ke kiri dan mendorong menu lain ke kanan */
+.navbar-logo {
+    margin-right: auto; /* Ini yang otomatis mendorong menu teks ke sebelah kanan */
+    display: flex;
+    align-items: center;
+}
+
+/* Mengatur Ukuran Gambar Logo di Navbar */
+.navbar-logo img {
+    height: 45px;       /* Atur tinggi logo agar pas dengan ukuran navbar */
+    width: auto;        /* Biar lebarnya otomatis menyesuaikan proporsi gambar */
+    object-fit: contain;
+}
+
 /* KONTEN UTAMA */
 .main-content {
     flex: 1;
@@ -305,7 +327,131 @@ body {
 
 
 /*🌹🌹🌹🌹🌹style profile🌹🌹🌹🌹🌹*/
+/* Konten Utama Container */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 80px 20px;
+    text-align: center;
+    width: 100%;
+}
 
+/* Logo Atas */
+.logo-profile {
+    margin-bottom: 15px;
+}
+
+.logo-profile img {
+    max-width: 140px;
+    height: auto;
+}
+
+/* Judul "PROFIL HOUSEKEEPER" */
+.profile-title {
+    font-family: 'Chonburi', serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: #231f20;
+    margin-bottom: 50px;
+    letter-spacing: -0.5px;
+}
+
+/* CONTAINER KARTU (FLEXBOX JALUR HORIZONTAL) */
+.bertiga {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 35px; /* Jarak antar kartu anggota */
+    width: 100%;
+    max-width: 1200px; /* Batas lebar total barisan kartu */
+    padding: 0 20px;
+}
+
+/* Kotak Biru */
+.card-member {
+    background-color: #ceddff;
+    flex: 1;
+    max-width: 320px; /* Lebar maksimal per kartu */
+    border-radius: 40px; /* Sudut melengkung lebar di luar kartu */
+    padding: 5px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+/* Pembungkus Foto */
+.img-wrapper {
+    width: 100%;
+    height: 240px; /* Batas tinggi area foto */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Supaya foto memotong pas di atas box putih */
+    margin-bottom: -15px; /* Bagian bawah foto menempel/masuk ke area box putih */
+    z-index: 1;
+}
+
+.img-wrapper img {
+    height: 120%; /* Proporsi badan pas */
+    width: auto;
+    object-fit: contain;
+    transform: translateY(-10px); /* Naikin foto di atas box biru */
+}
+
+/* BOX BIODATA PUTIH */
+.bio-box {
+    background-color: #fffcf5;
+    width: 100%;
+    border-radius: 25px; /* Sudut melengkung box putih */
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    z-index: 2; /* Berada di depan foto */
+}
+
+/* Nama Anggota */
+.bio-box h3 {
+    font-family: 'Chonburi', serif;
+    font-size: 18px;
+    color: #231f20;
+    margin-bottom: 8px;
+}
+
+/* Jabatan & Instagram */
+.bio-box p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    color: #231f20;
+    line-height: 1.4;
+}
+
+.bio-box .role {
+    font-weight: 700; /* Bold untuk jabatan */
+}
+
+.bio-box .ig {
+    font-weight: 400;
+    opacity: 0.8;
+    margin-bottom: 6px;
+}
+
+/* Link LinkedIn */
+.bio-box a {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 11px;
+    color: #231f20;
+    text-decoration: none;
+    word-break: break-all; /* Link panjang otomatis patah dan ga meluber keluar */
+    display: inline-block;
+    margin-top: 4px;
+    opacity: 0.9;
+}
+
+.bio-box a:hover {
+    text-decoration: underline; /* Garis bawah halus waktu mouse diarahkan */
+}
 
 
 

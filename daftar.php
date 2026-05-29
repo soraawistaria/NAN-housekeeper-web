@@ -47,6 +47,10 @@ if (isset($_POST['username'])) {
 
 <body>
     <nav class="navbar">
+        <a href="index.html" class="navbar-logo">
+            <img src="asset/logo.png" alt="Logo NAN">
+        </a>
+
         <a href="index.html">Beranda</a>
         <a href="profile.html">Profil</a>
         <a href="masuk.php">Masuk</a>

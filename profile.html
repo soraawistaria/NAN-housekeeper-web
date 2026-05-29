@@ -11,6 +11,9 @@
 </head>
 <body>
     <nav class="navbar">
+        <a href="index.html" class="navbar-logo">
+            <img src="asset/logo.png" alt="Logo NAN">
+        </a>
         <a href="index.html">Beranda</a>
         <a href="#">Profil</a>
         <a href="masuk.php">Masuk</a>
@@ -18,37 +21,59 @@
         <a href="formPemesanan.php">Pemesanan</a>
     </nav>
 
-    <img src="images/logo.png">
-    <h1>PROFIL HOUSEKEEPER</h1>
+    <!-- KONTEN UTAMA PROFIL -->
+    <main class="profile-container">
+        <!-- Logo Utama -->
+        <div class="logo-profile">
+            <img src="asset/logo.png" alt="Logo NAN Housekeeper">
+        </div>
+        
+        <!-- Judul Halaman -->
+        <h1 class="profile-title">PROFIL HOUSEKEEPER</h1>
 
-    <div class="bertiga">
-        <div class="nayla">
-            <img src="images/nayla.png">
-            <h3>Nayla Rizkia</h3>
-            <p>
-                CTO <br>
-                @naiylamp <br>
-                <a href="">Linkedin</a>
-            </p>
+        <!-- Container Kartu Tim (Bertiga) -->
+        <div class="bertiga">
+            
+            <!-- Kartu Nayla -->
+            <div class="card-member nayla">
+                <div class="img-wrapper">
+                    <img src="asset/nayla.png" alt="Nayla Rizkia">
+                </div>
+                <div class="bio-box">
+                    <h3>Nayla Rizkia</h3>
+                    <p class="role">CTO</p>
+                    <p class="ig">@naiylamp</p>
+                    <a href="https://www.linkedin.com/in/nayla-rizkia" target="_blank">https://www.linkedin.com/in/nayla-rizkia</a>
+                </div>
+            </div>
+
+            <!-- Kartu Sora -->
+            <div class="card-member sora">
+                <div class="img-wrapper">
+                    <img src="asset/sora.png" alt="Amalia Soraya">
+                </div>
+                <div class="bio-box">
+                    <h3>Amalia Soraya</h3>
+                    <p class="role">CEO</p>
+                    <p class="ig">@soraawistaria</p>
+                    <a href="https://www.linkedin.com/in/amaliasoraya/" target="_blank">https://www.linkedin.com/in/amaliasoraya/</a>
+                </div>
+            </div>
+
+            <!-- Kartu Fitri -->
+            <div class="card-member fitri">
+                <div class="img-wrapper">
+                    <img src="asset/fitri.png" alt="Nurfitria Ramadhani">
+                </div>
+                <div class="bio-box">
+                    <h3>Nurfitria Ramadhani</h3>
+                    <p class="role">COO</p>
+                    <p class="ig">@nurftriarmdhni</p>
+                    <a href="https://www.linkedin.com/in/nurfitria-ramadhani" target="_blank">https://www.linkedin.com/in/nurfitria-ramadhani</a>
+                </div>
+            </div>
+
         </div>
-        <div class="sora">
-            <img src="images/sora.png">
-            <h3>Amalia Soraya</h3>
-            <p>
-                CEO <br>
-                @soraawistaria <br>
-                <a href="">Linkedin</a>
-            </p>
-        </div>
-        <div class="fitri">
-            <img src="images/fitri.png">
-            <h3>Nurfitria Ramadhani</h3>
-            <p>
-                COO <br>
-                @nurftriarmdhni <br>
-                <a href="">Linkedin</a>
-            </p>
-        </div>
-    </div>
+    </main>
 </body>
 </html>
