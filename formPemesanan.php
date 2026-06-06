@@ -1,32 +1,30 @@
 <?php
-// 1. Panggil file koneksi yang tadi kita buat
+
 include 'koneksi.php';
 
-// 2. Cek apakah tombol PESAN sudah diklik dan mengirimkan data nama
+// apakah tombol PESAN sudah diklik dan mengirimkan data nama
 if (isset($_POST['nama'])) {
-    // Ambil data dari input HTML berdasarkan atribut 'name'
+    // Ambil data dari input HTML
     $nama   = $_POST['nama'];
     $alamat = $_POST['alamat'];
-    $nomor  = $_POST['nomor']; // sesuai atribut name="nomor" di input WA kamu
+    $nomor  = $_POST['nomor']; 
     $luas   = $_POST['luas'];
     $waktu  = $_POST['pilihan'];
     
-    // Khusus harga, kita hilangkan teks "Rp " dan tanda titik "." agar tersimpan sebagai angka bersih (INT)
+
     $harga_mentah = $_POST['harga'];
     $harga  = preg_replace('/[^0-9]/', '', $harga_mentah); 
 
-    // 3. Masukkan data ke tabel pesanan di HeidiSQL
-    // Sesuaikan dengan nama kolom baru yang kamu buat tadi (id_pesanan tidak perlu diisi karena auto increment)
+
     $query = "INSERT INTO pesanan (nama, alamat, no_wa, luas, waktu, harga) 
             VALUES ('$nama', '$alamat', '$nomor', '$luas', '$waktu', '$harga')";
     
     $simpan = mysqli_query($koneksi, $query);
 
-    // 4. Beri notifikasi ke user
     if ($simpan) {
         echo "<script>
                 alert('Pesanan Anda berhasil disimpan ke database!');
-                window.location='formPemesanan.php';
+                window.location='konfirmasi.html';
             </script>";
     } else {
         echo "<script>
@@ -38,28 +36,17 @@ if (isset($_POST['nama'])) {
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Pemesanan</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="index.html" class="navbar-logo">
-            <img src="asset/logo.png" alt="Logo NAN">
-        </a>
-
-        <a href="index.html">Beranda</a>
-        <a href="profile.html">Profil</a>
-        <a href="masuk.php">Masuk</a>
-        <a href="daftar.php">Daftar</a>
-        <a href="#">Pemesanan</a>
-    </nav>
 
     <main class="pemesanan-wrapper">
 
