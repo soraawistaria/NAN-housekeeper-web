@@ -47,7 +47,12 @@ if (isset($_POST['nama'])) {
     <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <nav class="navbar">
+        <a href="index.html" class="navbar-logo">
+            <img src="asset/logo.png" alt="Logo NAN">
+        </a>
+    </nav>
+    
     <main class="pemesanan-wrapper">
 
     <div class="pemesanan-kiri">
